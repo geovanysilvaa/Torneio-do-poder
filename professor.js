@@ -50,11 +50,11 @@ function iniciarAtaque() {
         if (efeito.log) parentPort.postMessage({ type: "log", text: `${nome}: ${efeito.log}` });
 
         // envia ataque com info de atacante
-
+        if (!efeito.esquiva) parentPort.postMessage({ type: "hit", target: alvo.nome, dano, atacante: nome });
 
         if (efeito.contra) {
             eu.hp -= efeito.contra;
-            parentPort.postMessage({ type: "log", text: `${alvo.nome} contra-atacou ${eu.nome} causando ${efeito.contra}` });
+              parentPort.postMessage({ type: "log", text: `${alvo.nome} contra-atacou ${eu.nome} causando ${efeito.contra}` });
         }
 
         if (efeito.splash) {

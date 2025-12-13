@@ -1,0 +1,12 @@
+{
+  "name": "torneio-do-poder",
+  "version": "1.0.0",
+  "description": "Simulação de batalha entre professores usando Worker Threads",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "Geovany, Afonso, Gleyson",
+  "license": "MIT"
+}
